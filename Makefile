@@ -3,11 +3,11 @@ CC := g++
 SFML := -lsfml-graphics -lsfml-window -lsfml-system
 
 LIB := $(SFML)
-LIB += json.o
+#LIB += json.o
 
 FLAGS := -std=c++17 -Wall
 
-OBJ := main.o noise.o tree.o
+OBJ := main.o noise.o tree.o json.o
 
 all: $(OBJ)
 	${CC} ${OBJ} -o landscape ${LIB} ${FLAGS}
